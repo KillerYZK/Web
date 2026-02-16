@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+<body>
+    <div class="introduccion">
+        <h1>¡Bienvenido al juego de golpea a Tetou!</h1>
+        <p>En este juego, el proposito es...</p>
+        <h2 class="rainbow-title">
+            <span class="rainbow-letter" style="animation-delay: 0s">G</span>
+            <span class="rainbow-letter" style="animation-delay: 0.1s">O</span>
+            <span class="rainbow-letter" style="animation-delay: 0.2s">L</span>
+            <span class="rainbow-letter" style="animation-delay: 0.3s">P</span>
+            <span class="rainbow-letter" style="animation-delay: 0.4s">E</span>
+            <span style="margin: 0 5px;"></span>
+            <span class="rainbow-letter" style="animation-delay: 0.5s">A</span>
+            <span style="margin: 0 5px;"></span>
+            <span class="rainbow-letter" style="animation-delay: 0.6s">T</span>
+            <span class="rainbow-letter" style="animation-delay: 0.7s">E</span>
+            <span class="rainbow-letter" style="animation-delay: 0.8s">T</span>
+            <span class="rainbow-letter" style="animation-delay: 0.9s">O</span>
+        </h2>
+    </div>
+    
+    <div class="background">
+        <div class="left-panel">
+            <button class="timer-button" id="timerBtn">00:00</button>
+            <div class="score-container">
+                <span class="score-label">Puntos:</span>
+                <span class="score-value" id="scoreValue">0</span>
+            </div>
+            <div class="difficulty-container">
+                <span class="difficulty-label">Dificultad:</span>
+                <div class="difficulty-buttons">
+                    <button class="difficulty-btn" id="easyBtn" data-difficulty="easy">Fácil</button>
+                    <button class="difficulty-btn active" id="normalBtn" data-difficulty="normal">Normal</button>
+                    <button class="difficulty-btn" id="hardBtn" data-difficulty="hard">Difícil</button>
+                </div>
+            </div>
+        </div>
+        <div class="game-container">
+            <div class="backgroundgame">
+                <table>
+                    <tr>
+                        <td><img id="1" src="../images/baguete.png" alt="Imagen 1"></td>
+                        <td><img id="2" src="../images/baguete.png" alt="Imagen 2"></td>
+                        <td><img id="3" src="../images/baguete.png" alt="Imagen 3"></td>
+                    </tr>
+                    <tr>
+                        <td><img id="4" src="../images/baguete.png" alt="Imagen 4"></td>
+                        <td><img id="5" src="../images/baguete.png" alt="Imagen 5"></td>
+                        <td><img id="6" src="../images/baguete.png" alt="Imagen 6"></td>
+                    </tr>
+                    <tr>
+                        <td><img id="7" src="../images/baguete.png" alt="Imagen 7"></td>
+                        <td><img id="8" src="../images/baguete.png" alt="Imagen 8"></td>
+                        <td><img id="9" src="../images/baguete.png" alt="Imagen 9"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <button class="start-button" id="startBtn">Iniciar Juego</button>
+    </div>
+    <audio id="soundTeto" preload="auto">
+        <source src="../Sounds/Teto.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="soundBaguete" preload="auto">
+        <source src="../Sounds/error.mp3" type="audio/mpeg">
+    </audio>
+    <script src="codigo.js"></script>
+</body>
+</html>
